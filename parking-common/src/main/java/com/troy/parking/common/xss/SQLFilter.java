@@ -9,7 +9,7 @@
 package com.troy.parking.common.xss;
 
 import com.troy.parking.common.exception.RRException;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * SQL过滤

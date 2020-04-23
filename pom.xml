@@ -12,7 +12,12 @@
         <module>parking-common</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
+        <module>parking-order</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
 
 </project>

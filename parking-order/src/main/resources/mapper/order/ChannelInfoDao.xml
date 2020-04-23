@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.order.dao.ChannelInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.order.entity.ChannelInfoEntity" id="channelInfoMap">
+        <result property="id" column="ID"/>
+        <result property="channelKey" column="CHANNEL_KEY"/>
+        <result property="channelValue" column="CHANNEL_VALUE"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="enable" column="ENABLE"/>
+        <result property="channel" column="CHANNEL"/>
+    </resultMap>
+
+
+</mapper>

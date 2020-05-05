@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.PaymentOrderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.PaymentOrderEntity" id="paymentOrderMap">
+        <result property="id" column="ID"/>
+        <result property="parkingOrderId" column="PARKING_ORDER_ID"/>
+        <result property="payAmount" column="PAY_AMOUNT"/>
+        <result property="payChannel" column="PAY_CHANNEL"/>
+        <result property="status" column="STATUS"/>
+        <result property="payChannleOrder" column="PAY_CHANNLE_ORDER"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="totalAmount" column="TOTAL_AMOUNT"/>
+        <result property="couponDiscount" column="COUPON_DISCOUNT"/>
+        <result property="pointDiscount" column="POINT_DISCOUNT"/>
+        <result property="point" column="POINT"/>
+        <result property="redirectUri" column="REDIRECT_URI"/>
+        <result property="mId" column="M_ID"/>
+        <result property="tId" column="T_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="payType" column="PAY_TYPE"/>
+        <result property="refundAmount" column="REFUND_AMOUNT"/>
+        <result property="payTime" column="PAY_TIME"/>
+        <result property="notifyStatus" column="NOTIFY_STATUS"/>
+        <result property="xzStatus" column="XZ_STATUS"/>
+        <result property="refundId" column="REFUND_ID"/>
+        <result property="payThirdChannleOrder" column="PAY_THIRD_CHANNLE_ORDER"/>
+        <result property="type" column="TYPE"/>
+        <result property="orderNumber" column="ORDER_NUMBER"/>
+        <result property="refundTime" column="REFUND_TIME"/>
+        <result property="prePaymentAmount" column="PRE_PAYMENT_AMOUNT"/>
+        <result property="platformSeq" column="PLATFORM_SEQ"/>
+        <result property="serviceCharge" column="SERVICE_CHARGE"/>
+        <result property="resMsg" column="RES_MSG"/>
+        <result property="refundReason" column="REFUND_REASON"/>
+    </resultMap>
+
+
+</mapper>

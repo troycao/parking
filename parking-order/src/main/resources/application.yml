@@ -1,22 +1,6 @@
-server:
-    port: 1000
-
 spring:
-    datasource:
-        url: jdbc:mysql://localhost:3306/parking_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        username: root
-        password: root
-        initial-size: 10
-        max-active: 100
-        min-idle: 10
-        max-wait: 60000
-        pool-prepared-statements: true
-        max-pool-prepared-statement-per-connection-size: 20
-        time-between-eviction-runs-millis: 60000
-        min-evictable-idle-time-millis: 300000
-    application:
-        name: parking-order
+    profiles:
+        active: dev #开发环境
+        #active: test #测试环境
+        #active: info
 
-mybatis-plus:
-    mapper-locations: classpath*:/mapper/**/*.xml

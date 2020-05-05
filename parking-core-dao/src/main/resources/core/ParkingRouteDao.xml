@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.ParkingRouteDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.ParkingRouteEntity" id="parkingRouteMap">
+        <result property="routeId" column="ROUTE_ID"/>
+        <result property="queryUrl" column="QUERY_URL"/>
+        <result property="callbackUrl" column="CALLBACK_URL"/>
+    </resultMap>
+
+
+</mapper>

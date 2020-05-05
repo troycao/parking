@@ -8,11 +8,14 @@
 
 package com.troy.parking.common.exception;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 自定义异常
  *
  * @author Mark sunlightcs@gmail.com
  */
+@Slf4j
 public class RRException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 	

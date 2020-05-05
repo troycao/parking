@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.ParkingOrderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.ParkingOrderEntity" id="parkingOrderMap">
+        <result property="id" column="ID"/>
+        <result property="parkingName" column="PARKING_NAME"/>
+        <result property="machineMer" column="MACHINE_MER"/>
+        <result property="channelCode" column="CHANNEL_CODE"/>
+        <result property="carNo" column="CAR_NO"/>
+        <result property="vehicleInDate" column="VEHICLE_IN_DATE"/>
+        <result property="vehicleInTime" column="VEHICLE_IN_TIME"/>
+        <result property="vehileOutDate" column="VEHILE_OUT_DATE"/>
+        <result property="vehileOutTime" column="VEHILE_OUT_TIME"/>
+        <result property="stayTime" column="STAY_TIME"/>
+        <result property="parkingFee" column="PARKING_FEE"/>
+        <result property="status" column="STATUS"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="machineId" column="MACHINE_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="paymrntnr" column="PAYMRNTNR"/>
+        <result property="routeId" column="ROUTE_ID"/>
+        <result property="parkingId" column="PARKING_ID"/>
+        <result property="gateOrderId" column="GATE_ORDER_ID"/>
+        <result property="deviceNo" column="DEVICE_NO"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, PARKING_NAME, MACHINE_MER, CHANNEL_CODE, CAR_NO, VEHICLE_IN_DATE, VEHICLE_IN_TIME,
+        VEHILE_OUT_DATE, VEHILE_OUT_TIME, STAY_TIME, PARKING_FEE, "STATUS", CREATE_TIME,
+        UPDATE_TIME, MACHINE_ID, USER_ID, PAYMRNTNR, ROUTE_ID, PARKING_ID, GATE_ORDER_ID,
+        DEVICE_NO
+    </sql>
+    <select id="selectOneByCarNo" resultMap="BaseResultMap">
+      SELECT
+          *
+      FROM
+          (
+              SELECT *
+          FROM
+              PARKING_PARKING_ORDER
+          WHERE
+              CAR_NO = #{carNo}
+          ORDER BY
+              CREATE_TIME DESC)t
+      WHERE
+          ROWNUM = 1
+    </select>
+    <update id="updateParkingFeeAndStatus">
+        UPDATE PARKING_PARKING_ORDER
+        SET PARKING_FEE = PARKING_FEE + #{parkingFee},
+            STATUS = #{parkingStatus}
+        WHERE ID = #{parkingOrderId}
+    </update>
+
+</mapper>

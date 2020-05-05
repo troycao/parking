@@ -1,0 +1,13 @@
+spring:
+    profiles:
+        active: dev #开发环境
+        #active: test #测试环境
+        #active: info
+
+qrcwebpay:
+    signKey: 123456789
+    host: 192.168.2.203
+    paymentUrl: http://192.168.3.203:9090/
+    orderType: aa
+    callbackNotify: http://192.168.3.203:9090/
+

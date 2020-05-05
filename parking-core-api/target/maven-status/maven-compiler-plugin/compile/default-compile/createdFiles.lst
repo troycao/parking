@@ -1,0 +1,5 @@
+com\troy\parking\core\api\GateService.class
+com\troy\parking\core\api\ParkingService.class
+com\troy\parking\core\api\bo\ParkingFeeResponseBO.class
+com\troy\parking\core\api\bo\ParkingFeeRequestBO.class
+com\troy\parking\core\api\ChannelInfoService.class

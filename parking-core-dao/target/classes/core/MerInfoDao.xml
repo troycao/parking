@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.MerInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.MerInfoEntity" id="merInfoMap">
+        <result property="id" column="ID"/>
+        <result property="parkingName" column="PARKING_NAME"/>
+        <result property="mId" column="M_ID"/>
+        <result property="tId" column="T_ID"/>
+        <result property="merName" column="MER_NAME"/>
+        <result property="fieldA" column="FIELD_A"/>
+        <result property="fieldB" column="FIELD_B"/>
+        <result property="fieldC" column="FIELD_C"/>
+        <result property="quartersId" column="QUARTERS_ID"/>
+        <result property="parkingId" column="PARKING_ID"/>
+        <result property="channel" column="CHANNEL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, PARKING_NAME, M_ID, T_ID, MER_NAME, FIELD_A, FIELD_B, FIELD_C, QUARTERS_ID, PARKING_ID,
+        CHANNEL
+    </sql>
+
+    <select id="selectMerInfoByParkingId" resultMap="merInfoMap">
+    select * from PARKING_MER_INFO where PARKING_ID = #{parkingId} AND rownum = 1
+  </select>
+
+</mapper>

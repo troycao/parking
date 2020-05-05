@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.GateDeviceInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.GateDeviceInfoEntity" id="gateDeviceInfoMap">
+        <result property="serialNo" column="SERIAL_NO"/>
+        <result property="parkingId" column="PARKING_ID"/>
+        <result property="parkingName" column="PARKING_NAME"/>
+        <result property="gateId" column="GATE_ID"/>
+        <result property="gateName" column="GATE_NAME"/>
+        <result property="boxName" column="BOX_NAME"/>
+        <result property="heartBeatStatus" column="HEART_BEAT_STATUS"/>
+        <result property="heartBeatErrorTime" column="HEART_BEAT_ERROR_TIME"/>
+        <result property="deviceStatus" column="DEVICE_STATUS"/>
+        <result property="deviceStatusErrorTime" column="DEVICE_STATUS_ERROR_TIME"/>
+        <result property="host" column="HOST"/>
+        <result property="port" column="PORT"/>
+        <result property="allowedAlarm" column="ALLOWED_ALARM"/>
+    </resultMap>
+
+
+</mapper>

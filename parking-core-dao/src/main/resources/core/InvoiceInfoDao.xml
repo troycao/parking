@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troy.parking.core.dao.InvoiceInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troy.parking.core.entity.InvoiceInfoEntity" id="invoiceInfoMap">
+        <result property="id" column="ID"/>
+        <result property="paymentOrderId" column="PAYMENT_ORDER_ID"/>
+        <result property="invoiceType" column="INVOICE_TYPE"/>
+        <result property="payerName" column="PAYER_NAME"/>
+        <result property="payerTaxId" column="PAYER_TAX_ID"/>
+        <result property="payerPhone" column="PAYER_PHONE"/>
+        <result property="payeeName" column="PAYEE_NAME"/>
+        <result property="payeeTaxId" column="PAYEE_TAX_ID"/>
+        <result property="payeeAddrPhone" column="PAYEE_ADDR_PHONE"/>
+        <result property="email" column="EMAIL"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="invoicePdfUrl" column="INVOICE_PDF_URL"/>
+        <result property="invoiceSpUrl" column="INVOICE_SP_URL"/>
+        <result property="invoiceCode" column="INVOICE_CODE"/>
+        <result property="invoiceNo" column="INVOICE_NO"/>
+        <result property="ticketOpenTime" column="TICKET_OPEN_TIME"/>
+        <result property="taxRate" column="TAX_RATE"/>
+        <result property="invoiceReqSeq" column="INVOICE_REQ_SEQ"/>
+        <result property="refundId" column="REFUND_ID"/>
+        <result property="invoiceAmount" column="INVOICE_AMOUNT"/>
+        <result property="taxAmount" column="TAX_AMOUNT"/>
+        <result property="nonTaxAmount" column="NON_TAX_AMOUNT"/>
+        <result property="taxRateCode" column="TAX_RATE_CODE"/>
+        <result property="oriInvoiceCode" column="ORI_INVOICE_CODE"/>
+        <result property="oriInvoiceNo" column="ORI_INVOICE_NO"/>
+        <result property="isDeleted" column="IS_DELETED"/>
+        <result property="invoiceStatus" column="INVOICE_STATUS"/>
+        <result property="refundSeq" column="REFUND_SEQ"/>
+        <result property="checkCode" column="CHECK_CODE"/>
+        <result property="xzstatus" column="XZSTATUS"/>
+        <result property="instatus" column="INSTATUS"/>
+    </resultMap>
+
+
+</mapper>
